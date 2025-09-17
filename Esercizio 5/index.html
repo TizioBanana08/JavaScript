@@ -12,6 +12,7 @@
         <script>
             function cambiaImmagine(){
                 var immagine = document.getElementById("immagine");
+                //Funzione di debug
                 console.log(immagine.src)
                 if(immagine.src.includes("mind-blown.gif")){
                     immagine.src="img/jackpot.gif";
@@ -20,6 +21,16 @@
                     immagine.src="img/mind-blown.gif"
                 }
             }
+            /*
+            -HTML: 
+            Immagine che cambia alla pressione del pulsante
+            Pulsante che richiama la funzione cambiaImmagine()
+            -JavaScript:
+            Variabile immagine che contiene l'elemento con id "immagine"
+            Ifelse che controlla se il contenuto dell'attributo src include il nome del filepresente nella condizione, in caso vero l'immagine
+            viene cambiata, altrimenti viene tenuta la stessa. Così facendo l'immagine verrà cambiata ad ogni pressione del pulsante.
+            */
         </script>
     </body>
 </html>
+
