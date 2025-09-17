@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-sclae=1.0">
+        <title>Esempio JavaScript</title>
+        <style>
+            .highlight{
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="titolo">Ciao, Mondo!</h1>
+        <button onclick="cambiaTesto()">Cliccami!</button>
+
+        <script>
+            function cambiaTesto(){
+                var titolo = document.getElementById("titolo");
+                titolo.textContent="Testo cambiato!";
+                titolo.classList.add("highlight");
+            }
+            /*
+            Spiegazione del codice:
+            -HTML di base:
+            elemento h1 con id "titolo" e button che esegue funzione cambiaTesto().
+            -CSS:
+            La classe .highlight colora di rosso e mette in grassetto il testo
+            -JavaScript:
+            Il JavaScript è inserito fra i tag <script> all'interno del <body>.
+            La funzione cambiaTesto() viene eseguita quando si preme il pulsante
+            La funzione recupera l'elemento h1 tramite il suo id "titolo"
+            Tramite titolo.textContent viene cambiato il contenuto dell'elemento
+            Tramite titolo.classList.add viene aggiunta la classe .highlist
+            */
+        </script> 
+    </body>
+</html>
