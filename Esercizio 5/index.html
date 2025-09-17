@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-sclae=1.0">
+        <title>Cambio immagine</title>
+    </head>
+    <body>
+        <img id="immagine" src="img/mind-blown.gif" alt="Immagine">
+        <button onclick="cambiaImmagine()">Cambia Immagine</button>
+
+        <script>
+            function cambiaImmagine(){
+                var immagine = document.getElementById("immagine");
+                console.log(immagine.src)
+                if(immagine.src.includes("mind-blown.gif")){
+                    immagine.src="img/jackpot.gif";
+                }
+                else{
+                    immagine.src="img/mind-blown.gif"
+                }
+            }
+        </script>
+    </body>
+</html><!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-sclae=1.0">
+        <title>Cambio immagine</title>
+    </head>
+    <body>
+
+    </body>
+</html>
