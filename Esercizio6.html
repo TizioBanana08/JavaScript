@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-sclae=1.0">
+        <title>Validazione Form</title>
+    </head>
+    <body>
+        <form id="mioForm" onsubmit="return validaForm()">
+            <label form="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <button type="submit">Invia</button>
+        </form>
+        <p id="errore" style="color: red"></p>
+
+        <script>
+            function validaForm(){
+                var nome = document.getElementById("nome").value;
+                var errore = document.getElementById("errore");
+                if(nome === ""){
+                    errore.textContent = "Il nome non può essere vuoto";
+                    return false;
+                }
+                else{
+                    errore.textContent = "";
+                    return true;
+                }
+            }
+            /*
+            -HTML:
+            Nell'HTML è presente un form etichettato "Nome:" con un pulsante di tipo submit che richiamerà la funzione validaForm() quando premuto
+            È presente un paragrafo vuoto che sarà riempito grazie al codice JavaScript se non viene inserito nulla nel form
+            -JavaScript:
+            Alla variabile nome è assegnto il valore contenuto nell'elemento con id "nome" cioè la parte di input del form
+            Alla variabile errore è assegnato l'elemento con id "errore"
+            Se il valore di nome è vuoto allora uscirà un messaggio di erorre nel paragarfo con id "erorre", altrimenti non succede nulla
+            */
+        </script>
+    </body>
+</html>
