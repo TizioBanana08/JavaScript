@@ -8,6 +8,7 @@
         <h1>Guarda il log!!!!</h1>
     </body>
     <script>
+        //UTILIZZO OPERATORE REST
         function aggiornaGiorni(giorniBase,...prestiti){
             let giorniFinali=giorniBase;
             for(let i=0;i<prestiti.length;i++){
@@ -25,6 +26,7 @@
         for(let i=0;i<lettori.length;i++){
             console.log(`${lettori[i].nome}: ${lettori[i].giorniBase} giorni`)
         }
+        //UTILIZZO OPERATORE SPREAD
         for(let i=0;i<lettori.length;i++){
             lettori[i].giorniBase+=aggiornaGiorni(lettori[i].giorniBase,...lettori[i].prestiti);
         }
@@ -33,4 +35,5 @@
             console.log(`${lettori[i].nome}: ${lettori[i].giorniBase} giorni`)
         }
     </script>
+
 </html>
