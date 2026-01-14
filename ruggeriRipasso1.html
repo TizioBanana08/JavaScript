@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Medie Studenti</title>
+    </head>
+    <body>
+        <h1>Guarda il log!!!!</h1>
+    </body>
+    <script>
+        function aggiornaPunteggio(puntiBase,...prestazioni){
+            let puntiFinali=puntiBase;
+            for(let i=0;i<prestazioni.length;i++){
+                puntiFinali+=prestazioni[i];
+            }
+            return puntiFinali;
+        }
+        //Funzione principale che gestisce gli studenti
+        const studenti =[
+            {nome:"Tommaso Ruggeri",puntiBase:67,prestazioni:[7,45,3,12]},
+            {nome:"Morgan Jia Xing Gerevini",puntiBase:69,prestazioni:[42,45,3,12]},
+            {nome:"Alessandro Rebuscini",puntiBase:68,prestazioni:[3,45,3,69]},
+        ];
+        console.log("Punteggi iniziali: ")
+        for(let i=0;i<studenti.length;i++){
+            console.log(`${studenti[i].nome}: ${studenti[i].puntiBase} punti`)
+        }
+        for(let i=0;i<studenti.length;i++){
+            studenti[i].puntiBase+=aggiornaPunteggio(studenti[i].puntiBase,...studenti[i].prestazioni);
+        }
+        console.log("Punteggi finali:")
+        for(let i=0;i<studenti.length;i++){
+            console.log(`${studenti[i].nome}: ${studenti[i].puntiBase} punti`)
+        }
+    </script>
+</html>

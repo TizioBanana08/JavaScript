@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Medie Studenti</title>
+    </head>
+    <body>
+        <h1>Guarda il log!!!!</h1>
+    </body>
+    <script>
+        function aggiornaGiorni(giorniBase,...prestiti){
+            let giorniFinali=giorniBase;
+            for(let i=0;i<prestiti.length;i++){
+                giorniFinali+=prestiti[i];
+            }
+            return giorniFinali;
+        }
+        //Funzione principale che gestisce gli studenti
+        const lettori=[
+            {nome:"Tommaso Ruggeri",giorniBase:67,prestiti:[7,45,3,12]},
+            {nome:"Morgan Jia Xing Gerevini",giorniBase:69,prestiti:[42,45,3,12]},
+            {nome:"Alessandro Rebuscini",giorniBase:68,prestiti:[3,45,3,69]},
+        ]
+        console.log("Giorni iniziali: ")
+        for(let i=0;i<lettori.length;i++){
+            console.log(`${lettori[i].nome}: ${lettori[i].giorniBase} giorni`)
+        }
+        for(let i=0;i<lettori.length;i++){
+            lettori[i].giorniBase+=aggiornaGiorni(lettori[i].giorniBase,...lettori[i].prestiti);
+        }
+        console.log("Giorni finali:")
+        for(let i=0;i<lettori.length;i++){
+            console.log(`${lettori[i].nome}: ${lettori[i].giorniBase} giorni`)
+        }
+    </script>
+</html>
